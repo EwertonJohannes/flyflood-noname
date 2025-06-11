@@ -79,14 +79,11 @@ if __name__ == "__main__":
 
         if sequencia_otima:
             texto_da_sequencia = " ".join(sequencia_otima)
-            print("\n--- Resultado do Algoritmo ---")
+            
             print(f"A melhor sequência de entrega é: {texto_da_sequencia}")
-            print(f"Distância total do percurso (em dronômetros): {distancia_minima}")
         else:
             print("Não foi possível encontrar um caminho (não há pontos de entrega).")
-
     except FileNotFoundError:
         print(f"\nERRO: O arquivo '{nome_do_arquivo_de_entrada}' não foi encontrado.")
-        print("Por favor, crie este arquivo na mesma pasta do script e coloque a matriz dentro dele.")
     except Exception as erro:
         print(f"Ocorreu um erro inesperado: {erro}")
